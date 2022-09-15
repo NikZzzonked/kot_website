@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Kot's Webpage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!--Header with navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Kot the Cat</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse dropstart" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="trivia.html">Trivia!</a></li>
+                                <li><a class="dropdown-item" href="my_activity.html">My activity</a></li>
+                                <li><a class="dropdown-item" href="video_links.html">Funny videos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <br>
+            <h2 class="h2 text-center">Hi and welcome! I'm Kot the Cat!</h2>
+            <br>
+        </div>
+
+        <!--Carousel with Kot's photos and some info-->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./media/Home2.jpg" class="d-block w-100" alt="Kot the cat in person">
+                    <!--Info visible only on big screens-->
+                    <div class="carousel-caption d-none d-md-block section">
+                        <h4>The one and the only</h4>
+                        <p>
+                        How many cats have their own webpage? I have one! Here is me, not an ordinary black and white cat.
+                        Despite me being older than 10 years, I still feel myself young. While most of cats have one family,
+                        I am lucky enough to be a part of two that love me so much!
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./media/Home1.JPG" class="d-block w-100" alt="Kot the Cat's portrait">
+                    <!--Caption visible only on big screens-->
+                    <div class="carousel-caption d-none d-md-block section">
+                        <h4>My portrait</h4>
+                        <p>I also - like humans - have portrait photos. Though, this one is without bokeh (pretty fancy word, huh)</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./media/Home3.jpg" class="d-block w-100" alt="Kot the Cat is lying">
+                    <!--Caption visible only on big screens-->
+                    <div class="carousel-caption d-none d-md-block section">
+                        <h4>My magnificent fur is not hair </h4>
+                        <p>I am not fat, it's fur and wrong photo angle. Trust me</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </br>
+
+        <!--Info shown only on mobile devices-->
+        <div class="container d-md-none">
+            <h4>Here are several things to know about me:</h4>
+            <ul>
+              <li>
+                How many cats have their own webpage? I have one! Here is me, not an ordinary black and white cat
+                </li>
+                <li>
+                Despite me being older than 10 years, I still feel myself young. While most of cats have one family,
+                I am lucky enough to be a part of two that love me so much!
+                </li>
+                <li>
+                I also - like humans - have portrait photos. Though, the one above is without bokeh (pretty fancy word, huh).
+                </li>
+                <li>
+                I am not fat. it might be fur or/and wrong angle of the photo. Trust me.
+                </li>
+            </ul>
+        </div>
+
+        <!--Footer-->
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class= section style="float: left">
+                    <p style="color: white; font-size: 0.7rem; display: inline">&#169; 2022 Kot the Cat</p>
+                </div>
+                <div class= section  style="float: right">
+                  <p style="color: white; font-size: 0.7rem; display: inline">Thanks for visiting!</p>
+              </div>
+        </nav>
+    </body>
+</html>
