@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Trivia! How good you think you know us?</title>
+        <script>
+
+            //Introduction of glodal variables
+            let total_score = 0;
+            const answers = ['Egypt', 'Felidae', '11 million', 'Felis catus', '15 years'];
+
+            //Alert when all answers are correct
+            function display() {
+                if (total_score == 5) {
+                    alert("Well done! You've got all 5 purrs!\nYou are welcome to continue browsing my website.");
+                }
+            }
+
+            //When clicking checks the correct answer
+            function checkMCQAnswer(event) {
+              let answer = event.target;
+              let message_id = event.target.id;
+              //Prevents from answering correctly multiple times on the same question to reach alert message
+              if (document.querySelector("#message_" + message_id).innerHTML == "Correct!") {
+              } else {
+                  if (answers.includes(answer.innerHTML))  {
+                      answer.style.backgroundColor = "#7bc86c";
+                      document.querySelector("#message_" + message_id).innerHTML = "Correct!";
+                      window[message_id + "+= 1"];
+                      total_score += 1;
+                      console.log(total_score);
+                      window[message_id] += 1;
+                      display();
+                  } else {
+                      answer.style.backgroundColor = "#ef7564";
+                      document.querySelector("#message_" + message_id).innerHTML = "Incorrect!";
+                    }
+                  }
+            }
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <!--Header-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Kot the Cat</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse dropstart" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="index.html">Homepage</a></li>
+                      <li><a class="dropdown-item" href="my_activity.html">My activity</a></li>
+                      <li><a class="dropdown-item" href="video_links.html">Funny videos</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div class="container">
+          <br>
+            <h2 class="h2 text-center">Trivia! How good you think you know us [cats]?</h1>
+              <br>
+          </div>
+
+          <!--MSQ 1-->
+          <div class="container">
+              <div class="section">
+                  <h3>Which mammals family do we belong to?</h3>
+                  <hr>
+
+                  <button id="MCQ_1" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Ursidae</button>
+                  <button id="MCQ_1" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Felidae</button>
+                  <button id="MCQ_1" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Canidae</button>
+                  <button id="MCQ_1" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Phocidae</button>
+                  <button id="MCQ_1" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Viverridae</button>
+
+                  <p id="message_MCQ_1"></p>
+              </div>
+
+              </div>
+          </div>
+
+          <!--MSQ 2-->
+          <div class="container">
+            <div class="section">
+                <h3>Which country warshipped us in ancient times?</h3>
+                <hr>
+
+                <button id="MCQ_2" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Rome</button>
+                <button id="MCQ_2" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Persia</button>
+                <button id="MCQ_2" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">China</button>
+                <button id="MCQ_2" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Egypt</button>
+                <button id="MCQ_2" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Grece</button>
+
+                <p id="message_MCQ_2"></p>
+            </div>
+          </div>
+
+          <!--MSQ 3-->
+          <div class="container">
+            <div class="section">
+                <h3>What is an average lifespan of pet cats?</h3>
+                <hr>
+
+                <button id="MCQ_3" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">3 years</button>
+                <button id="MCQ_3" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">5 years</button>
+                <button id="MCQ_3" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">8 years</button>
+                <button id="MCQ_3" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">15 years</button>
+                <button id="MCQ_3" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">25 years</button>
+
+                <p id="message_MCQ_3"></p>
+            </div>
+          </div>
+
+          <!--MSQ 4-->
+          <div class="container">
+            <div class="section">
+                <h3>What is the scientific name of the domestic cat?</h3>
+                <hr>
+
+                <button id="MCQ_4" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Panthera tigris</button>
+                <button id="MCQ_4" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Felis dogus</button>
+                <button id="MCQ_4" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Felis catus</button>
+                <button id="MCQ_4" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Felis ratus</button>
+                <button id="MCQ_4" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">Felis caracal</button>
+
+                <p id="message_MCQ_4"></p>
+            </div>
+          </div>
+
+          <!--MSQ 5-->
+          <div class="container">
+            <div class="section">
+                <h3>How many domestic cats were in UK in 2020?</h3>
+                <hr>
+
+                <button id="MCQ_5" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">100</button>
+                <button id="MCQ_5" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">100 tousand</button>
+                <button id="MCQ_5" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">5 million</button>
+                <button id="MCQ_5" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">4 billiard</button>
+                <button id="MCQ_5" type="button" class="btn btn-outline-secondary" onclick="checkMCQAnswer(event);">11 million</button>
+
+                <p id="message_MCQ_5"></p>
+            </div>
+          </div>
+          </hr>
+
+          <p style="padding-left: 3%">Info for this quiz was taken from <a href="https://en.wikipedia.org/wiki/Cat">Wikipedia</a></p>
+
+
+        <!--Footer-->
+        <nav class="navbar navbar-dark bg-dark">
+          <div class="container-fluid">
+              <div class= section style="float: left">
+                  <p style="color: white; font-size: 0.7rem; display: inline">&#169; 2022 Kot the Cat</p>
+              </div>
+              <div class= section  style="float: right">
+                <p style="color: white; font-size: 0.7rem; display: inline">Thanks for visiting!</p>
+            </div>
+        </nav>
+    </body>
+</html>
